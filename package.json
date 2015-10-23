@@ -4,18 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "budo . -d test"
+    "start": "budo . -d test",
+    "test": "run-browser test/test.js"
   },
   "keywords": [],
   "author": "Will Binns-Smith <wbinnssmith@gmail.com> (http://wbinnssmith.com)",
   "license": "MIT",
   "dependencies": {
     "picturefill": "^3.0.1",
-    "skatejs": "github:skatejs/skatejs",
+    "skatejs": "github:skatejs/skatejs#property-ready-undefined",
     "skatejs-type-attribute": "github:skatejs/type-attribute"
   },
   "devDependencies": {
     "budo": "^5.1.5",
+    "garnish": "^3.2.1",
+    "run-browser": "^2.0.2",
+    "tape": "^4.2.2",
     "webcomponents.js": "^0.7.2"
   }
 }

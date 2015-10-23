@@ -3,18 +3,12 @@ var attribute = require('skatejs-type-attribute');
 var picturefill = require('picturefill');
 
 function onCreate(el) {
-  console.log('creating')
   picturefill({ elements: [el] });
 }
 
 function onModify(el) {
-  alert('modified', el.id);
   picturefill({ reevaluate: true, elements: [el] });
 }
-
-skate('picture', {
-  created: onCreate
-});
 
 skate('srcset', {
   extends: 'img',
@@ -22,7 +16,7 @@ skate('srcset', {
   properties: {
     srcset: skate.property.string({
       set: function (el, change) {
-        console.log('setting', change)
+        console.log('set called', arguments)
         if (change.oldValue !== change.newValue) {
           onModify(el);
         }
@@ -31,6 +25,7 @@ skate('srcset', {
 
     'data-srcset': skate.property.string({
       set: function (el, change) {
+        console.log('set called', arguments)
         var srcsetVal = el.getAttribute('srcset');
         if ((change.oldValue !== change.newValue) && (change.newValue !== srcsetVal)) {
           el.setAttribute('srcset', change.newValue)
@@ -38,4 +33,8 @@ skate('srcset', {
       }
     })
   }
+});
+
+module.exports = skate('picture', {
+  created: onCreate
 });
