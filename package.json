@@ -1,7 +1,7 @@
 {
   "name": "skate-picturefill",
   "version": "1.0.0",
-  "description": "",
+  "description": "srcset and <picture> polyfill with mutation observation",
   "main": "index.js",
   "scripts": {
     "start": "budo . -d test",
