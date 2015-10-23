@@ -16,25 +16,8 @@ skate('srcset', {
   properties: {
     srcset: skate.property.string({
       set: function (el, change) {
-        console.log('set called', arguments)
         if (change.oldValue !== change.newValue) {
           onModify(el);
-        }
-      }
-    })
-  }
-});
-
-skate('data-srcset', {
-  extends: 'img',
-  type: attribute,
-  properties: {
-    'data-srcset': skate.property.string({
-      set: function (el, change) {
-        console.log('set called', arguments)
-        var srcsetVal = el.getAttribute('srcset');
-        if ((change.oldValue !== change.newValue) && (change.newValue !== srcsetVal)) {
-          el.setAttribute('srcset', change.newValue)
         }
       }
     })
