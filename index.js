@@ -21,8 +21,14 @@ skate('srcset', {
           onModify(el);
         }
       }
-    }),
+    })
+  }
+});
 
+skate('data-srcset', {
+  extends: 'img',
+  type: attribute,
+  properties: {
     'data-srcset': skate.property.string({
       set: function (el, change) {
         console.log('set called', arguments)
