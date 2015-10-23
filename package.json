@@ -1,6 +1,6 @@
 {
   "name": "skate-picturefill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "srcset and <picture> polyfill with mutation observation",
   "main": "index.js",
   "scripts": {
