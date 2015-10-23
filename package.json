@@ -1,0 +1,21 @@
+{
+  "name": "skate-picturefill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "budo . -d test"
+  },
+  "keywords": [],
+  "author": "Will Binns-Smith <wbinnssmith@gmail.com> (http://wbinnssmith.com)",
+  "license": "MIT",
+  "dependencies": {
+    "picturefill": "^3.0.1",
+    "skatejs": "github:skatejs/skatejs",
+    "skatejs-type-attribute": "github:skatejs/type-attribute"
+  },
+  "devDependencies": {
+    "budo": "^5.1.5",
+    "webcomponents.js": "^0.7.2"
+  }
+}
